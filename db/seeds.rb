@@ -13,6 +13,7 @@ puts "Creating Test-User"
 User.create!(email: "Carlo@Carlo.com", password: "password")
 
 puts "Creating Test-Consultation"
+# Problem is no association with user - may be missing in schema.rb
 Consultation.create!(user_id: 2, name: "RPG")
 
 puts "Finished creating Seeds with #{User.count} Users and #{Consultation.count} Consultation."
