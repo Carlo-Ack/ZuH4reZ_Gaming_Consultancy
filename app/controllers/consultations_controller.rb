@@ -2,7 +2,8 @@ class ConsultationsController < ApplicationController
   # before_action : authenticate_user ??
 
   def index
-    @consultations = current_user.consultations
+    # @consultations = current_user.consultations
+    @consultastions = Consultation.all
   end
 
   def new
