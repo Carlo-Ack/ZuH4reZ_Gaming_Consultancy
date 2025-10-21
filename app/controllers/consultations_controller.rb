@@ -20,6 +20,8 @@ class ConsultationsController < ApplicationController
     end
   end
 
+  # should also update?
+
   private
 
   def consultation_params
