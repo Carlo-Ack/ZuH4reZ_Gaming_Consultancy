@@ -1,9 +1,15 @@
 <h1>Current Consultations:</h1>
 
-<div class="consultcardcontainer">Test</div>
+<div class="consultcardcontainer">
 
-<%# <% @consultations.each do |consultation| %>
-  <%# <div class="consultation-card"> %>
-    <%# <h2><%= consultation.name %>
-  <%# </div> %>
-<%# <% end %>
+  <% @consultations.each do |consultation| %>
+    <div class="consultation-card">
+      <h2><%= consultation.name %></h2>
+    </div>
+  <% end %>
+
+</div>
+
+<div class="consultationindex">
+ <%= link_to "Create new", new_consultation_path, class: "btn btn-outline-primary btn-sm", style: "border-radius:12px;" %>
+</div>

@@ -3,15 +3,21 @@ class ConsultationsController < ApplicationController
 
   def index
     # @consultations = current_user.consultations
-    @consultastions = Consultation.all
+    @consultations = Consultation.all
   end
 
   def new
-    @consultation = current_user.consultations.new
+    # @consultation = current_user.consultations.new
+    @consultation = Consultations.new
+
+
+
+    
   end
 
   def create
-    @consultation = current_user.consultations.new(consultation_params)
+    # @consultation = current_user.consultations.new(consultation_params)
+    @consultation = Consultations.new(consultation_params)
     @consultation.date = Date.today
     if @consultation.save
       redirect_to consultations_path
@@ -26,7 +32,7 @@ class ConsultationsController < ApplicationController
   private
 
   def consultation_params
-    params.require(:consultastion).permit(:name)
+    params.require(:consultation).permit(:name)
   end
 
 end
