@@ -8,11 +8,7 @@ class ConsultationsController < ApplicationController
 
   def new
     # @consultation = current_user.consultations.new
-    @consultation = Consultations.new
-
-
-
-    
+    @consultation = Consultation.new
   end
 
   def create
