@@ -15,6 +15,7 @@ class ConsultationsController < ApplicationController
   def chosen_category
     @consult_category = params[:category]
     redirect_to consult_survey_path(@consult_category)
+    # wenn das so geht? :D
   end
 
   def survey
