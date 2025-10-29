@@ -3,3 +3,6 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "@popperjs/core"
 import "bootstrap"
+
+// because of imports above, just script something directly in here.
+// then render the script in the VIEWS
