@@ -27,6 +27,7 @@ class ConsultationsController < ApplicationController
     # Here you could save survey data or send it to an LLM API
     @consult_category = params[:consult_category]
     @responses = params[:responses]
+    # storing what was put in the form in the view into above variable
     redirect_to consult_chat_path("llm")
   end
 

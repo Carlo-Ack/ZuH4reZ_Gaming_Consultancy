@@ -9,6 +9,7 @@
 <%# 2.depending on the chosen category have a survey prepared
 <%# if @consult_category == "Shooter" do ?render? @shooter_survey %>
 
+<%# Should be hidden until Start Survey was submitted %>
 <h3>Shooter Survey</h3>
 <%= form_with url: "/consult/submit_survey", method: :post do %>
   <%= hidden_field_tag :consult_category, "Shooter" %>
