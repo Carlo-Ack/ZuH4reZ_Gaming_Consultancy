@@ -1,0 +1,14 @@
+<h3>Shooter Survey</h3>
+<%= form_with url: "/consult/submit_survey", method: :post do %>
+  <%= hidden_field_tag :consult_category, "Shooter" %>
+
+<%# 3. filling in survey (what do you like about <category?>, what would you like to do in the <category>) %>
+<%# render shared form <category> with input forms with placeholders %>
+
+
+  <p>What do you like about Shooter games?</p>
+  <%= text_area_tag "responses[likes]", nil, placeholder: "Fast action, aiming skills, tactial squad coordination..." %>
+  <p>How difficult should the Shooter game be?</p>
+  <%= text_area_tag "responses[difficulty]", nil, placeholder: "Sweaty, casual-friendly, easy..." %>
+  <%= submit_tag "Submit Survey" %>
+<% end %>

@@ -1,0 +1,9 @@
+<h3>Strategy Survey</h3>
+<%= form_with url: "/consult/submit_survey", method: :post do %>
+  <%= hidden_field_tag :consult_category, "Strategy" %>
+  <p>What do you like about Strategy games?</p>
+  <%= text_area_tag "responses[likes]", nil, placeholder: "Fast action, aiming skills, tactial squad coordination..." %>
+  <p>How difficult should the Strategy game be?</p>
+  <%= text_area_tag "responses[difficulty]", nil, placeholder: "Sweaty, casual-friendly, easy..." %>
+  <%= submit_tag "Submit Survey" %>
+<% end %>

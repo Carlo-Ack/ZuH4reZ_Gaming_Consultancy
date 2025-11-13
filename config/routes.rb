@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   resources :user
   resources :consultations
+  post 'consult/category', to: 'consultations#select_category'
+  # is this post request neccessary?
 
 end

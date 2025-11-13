@@ -2,28 +2,18 @@
 
 <h2>Choose a Category:</h2>
 <%= form_with url: "/consult/category", method: :post do %>
-  <%= select_tag :category, options_for_select(@categories) %>
+  <%= select_tag :category, options_for_select(@categories, @consult_category) %>
   <%= submit_tag "Start Survey" %>
 <% end %>
 
-<%# 2.depending on the chosen category have a survey prepared
-<%# if @consult_category == "Shooter" do ?render? @shooter_survey %>
-
+<%# depending on the chosen category have a survey prepared
 <%# Should be hidden until Start Survey was submitted %>
-<h3>Shooter Survey</h3>
-<%= form_with url: "/consult/submit_survey", method: :post do %>
-  <%= hidden_field_tag :consult_category, "Shooter" %>
 
-<%# 3. filling in survey (what do you like about <category?>, what would you like to do in the <category>) %>
-<%# render shared form <category> with input forms with placeholders %>
-
-  <p>What do you like about Shooter games?</p>
-  <%= text_area_tag "responses[likes]", nil, placeholder: "Fast action, aiming skills, tactial squad coordination..." %>
-  <p>How difficult should the Shooter game be?</p>
-  <%= text_area_tag "responses[difficulty]", nil, placeholder: "Sweaty, casual-friendly, easy..." %>
-  <%= submit_tag "Submit Survey" %>
+<% if @consult_category == "Shooter" %>
+  <%= render 'shared/survey_shooter' %>
+<% elsif @consult_category == "RPG" %>
+  <%= render 'shared/survey_rpg' %>
 <% end %>
-
 <%# This then for all the other categories! %>
 
 <%# 4. get consulted by LLM? %>
