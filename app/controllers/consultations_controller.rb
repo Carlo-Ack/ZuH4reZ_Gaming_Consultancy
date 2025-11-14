@@ -10,18 +10,15 @@ class ConsultationsController < ApplicationController
     # @consultation = current_user.consultations.new
     @consultation = Consultation.new
     @categories = ["Shooter", "RPG", "Strategy", "Simulation", "Jump & Run", "Roguelike"]
+    @consult_category = params[:category]
   end
 
   def chosen_category
     @consult_category = params[:category]
-    render :new
-    # redirect_to consult_survey_path(@consult_category)
-    # wenn das so geht? :D
-  end
 
-  def survey
-    @consult_category = params[:category]
-    render partial: "#{@consult_category.downcase}_survey"
+    # render :new  OR REDIRECT ?! WHICH ONE?!
+
+
   end
 
   def submit_survey
@@ -36,22 +33,6 @@ class ConsultationsController < ApplicationController
     @mode = params[:mode] # "llm" or "admin"
     # Mode decides whether chat connects to GPT or human admin
   end
-
-    def create
-      @consult_category = params[:category]
-      @categories = ["Shooter", "RPG", "Strategy"]
-      render :new
-      # @consultation = current_user.consultations.new(consultation_params)
-      # @consultation = Consultations.new(consultation_params)
-      # @consultation.date = Date.today
-      # if @consultation.save
-      #   redirect_to consultations_path
-      # else
-      #   flash.now[:alert] = "Failed to create consultation."
-      #   render :new, status: :unprocessable_entity
-      # end
-    end
-  # should also update?
 
   # private
 
