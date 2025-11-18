@@ -15,10 +15,7 @@ class ConsultationsController < ApplicationController
 
   def chosen_category
     @consult_category = params[:category]
-
-    # render :new  OR REDIRECT ?! WHICH ONE?!
-
-
+    redirect_to new_consultation_path(category: params[:category])
   end
 
   def submit_survey
