@@ -1,9 +1,13 @@
-<h3>Strategy Survey</h3>
-<%= form_with url: "/consult/submit_survey", method: :post do %>
-  <%= hidden_field_tag :consult_category, "Strategy" %>
-  <p>What do you like about Strategy games?</p>
-  <%= text_area_tag "responses[likes]", nil, placeholder: "Fast action, aiming skills, tactial squad coordination..." %>
-  <p>How difficult should the Strategy game be?</p>
-  <%= text_area_tag "responses[difficulty]", nil, placeholder: "Sweaty, casual-friendly, easy..." %>
+<h3>Roguelike Survey</h3>
+
+  <p>What do you like about Roguelikes? games?</p>
+  <%= text_area_tag "responses[likes]", nil, placeholder: "Difficulty, progression" %>
+  <p>How difficult should the game be?</p>
+  <%= text_area_tag "responses[difficulty]", nil, placeholder: "Sweaty, casual-friendly, easy" %>
+  <p>Will you be playing on a computer or on console?</p>
+  <%= text_area_tag "responses[medium]", nil, placeholder: "Computer, PS5, Xbox" %>
+  <p>What is your goal while playing the game?</p>
+  <%= text_area_tag "responses[goal]", nil, placeholder: "problem solving, achieve progression" %>
+  <p>How much time can you spend on it?</p>
+  <%= text_area_tag "responses[time]", nil, placeholder: "undefined" %>
   <%= submit_tag "Submit Survey" %>
-<% end %>
