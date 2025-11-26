@@ -1,0 +1,17 @@
+<h1>Welcome to the Battlefield6 Randomizer:</h1>
+
+<h2>Watch history:</h2>
+<div class="bfrandomizercardcontainer">
+
+<%# not clickable atm %>
+  <% @bfrandomizers.each do |randomizer| %>
+    <div class="bfrandomizer-card">
+      <h2><%= bfrandomizer.name %></h2>
+    </div>
+  <% end %>
+
+</div>
+
+<div class="bfrandomizerindex">
+ <%= link_to "Roll the dice", new_consultation_path, class: "btn btn-outline-primary btn-sm", style: "border-radius:12px;" %>
+</div>

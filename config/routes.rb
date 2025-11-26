@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   resources :user
+
   resources :consultations
   post 'consult/category', to: 'consultations#chosen_category', as: :chosen_category
+
+  resources :bfrandomizer
 
 end
