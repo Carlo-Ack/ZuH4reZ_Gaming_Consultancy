@@ -3,4 +3,5 @@ class Survey < ApplicationRecord
 # Do I want it stored in DB as first_answer, second_answer... etc.?
 
 # asd
+
 end
