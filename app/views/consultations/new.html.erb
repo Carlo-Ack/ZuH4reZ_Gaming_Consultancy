@@ -1,0 +1,28 @@
+<h1> New Consultation </h1>
+
+<h2>Choose a Category:</h2>
+<%= form_with url: chosen_category_path, method: :post do %>
+  <%= select_tag :category, options_for_select(@categories, @consult_category) %>
+  <%= submit_tag "Start Survey" %>
+<% end %>
+
+<% if @consult_category == "Shooter" %>
+  <%= render 'shared/survey_shooter' %>
+<% elsif @consult_category == "RPG" %>
+  <%= render 'shared/survey_rpg' %>
+<% elsif @consult_category == "Strategy" %>
+  <%= render 'shared/survey_strategy' %>
+<% elsif @consult_category == "Simulation" %>
+  <%= render 'shared/survey_simulation' %>
+  <% elsif @consult_category == "Jump & Run" %>
+  <%= render 'shared/survey_jumpandrun' %>
+  <% elsif @consult_category == "Roguelike" %>
+  <%= render 'shared/survey_roguelike' %>
+<% end %>
+
+
+<%# 4. get consulted by LLM? %>
+<%# open chat? %>
+
+<%# 5. get consulted by ZuH4reZ? %>
+<%# open chat with admin? %>

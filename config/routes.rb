@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   resources :user
   resources :consultations
+  post 'consult/category', to: 'consultations#chosen_category', as: :chosen_category
 
 end
