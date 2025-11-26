@@ -1,15 +1,13 @@
 <h1>Welcome to the Battlefield6 Randomizer:</h1>
-
 <h2>Watch history:</h2>
 <div class="bfrandomizercardcontainer">
 
 <%# not clickable atm %>
   <% @bfrandomizer_history.each do |bfrandomizer| %>
     <div class="bfrandomizer-card">
-      <h2><%= bfrandomizer.name %></h2>
+      <h2><%= bfrandomizer.name%>, <%= bfrandomizer.created_at%></h2>
     </div>
   <% end %>
-
 </div>
 
 <div class="bfrandomizerroll">
