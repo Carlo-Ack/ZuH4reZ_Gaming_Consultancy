@@ -8,12 +8,11 @@ class BfrandomizersController < ApplicationController
   def new
     # @bfrandomizer_history = current_user.bfrandomizer.new
     @bfrandomizer = Bfrandomizer.new
-    # @categories = ["Shooter", "RPG", "Strategy", "Simulation", "Jump & Run", "Roguelike"]
-    # @consult_category = params[:category]
   end
 
   def roll
-    @result = Bfrandomizer.random_result
+    # @result = Bfrandomizer.random?
+    # Something like this ^^
     render partial: 'shared/random_result', locals: { result: @result }
   end
 

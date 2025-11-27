@@ -1,7 +1,8 @@
 <h1>Welcome to the Battlefield6 Randomizer:</h1>
-<h2>Watch history:</h2>
-<div class="bfrandomizercardcontainer">
 
+<h2>Watch history:</h2>
+
+<div class="bfrandomizercardcontainer">
 <%# not clickable atm %>
   <% @bfrandomizer_history.each do |bfrandomizer| %>
     <div class="bfrandomizer-card">
@@ -10,12 +11,13 @@
   <% end %>
 </div>
 
-<turbo-frame id="randomizer_result">
-  <%= render "random_result" %>
-</turbo-frame>
 
 <div class="bfrandomizerroll">
  <%= link_to "Roll the dice",
   roll_bfrandomizers_path,
   class: "btn btn-outline-primary btn-sm", style: "border-radius:12px;" %>
 </div>
+
+<turbo-frame id="randomizer_result">
+  <%= render "random_result" %>
+</turbo-frame>
