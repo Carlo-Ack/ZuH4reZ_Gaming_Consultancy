@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :consultations
   post 'consult/category', to: 'consultations#chosen_category', as: :chosen_category
 
-  resources :bfrandomizer
+  resources :bfrandomizers do
+    get :roll, on: :collection
+  end
 
 end

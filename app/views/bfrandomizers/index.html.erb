@@ -10,6 +10,12 @@
   <% end %>
 </div>
 
+<turbo-frame id="randomizer_result">
+  <%= render "random_result" %>
+</turbo-frame>
+
 <div class="bfrandomizerroll">
- <%= link_to "Roll the dice", new_bfrandomizer_path, class: "btn btn-outline-primary btn-sm", style: "border-radius:12px;" %>
+ <%= link_to "Roll the dice",
+  roll_bfrandomizers_path,
+  class: "btn btn-outline-primary btn-sm", style: "border-radius:12px;" %>
 </div>

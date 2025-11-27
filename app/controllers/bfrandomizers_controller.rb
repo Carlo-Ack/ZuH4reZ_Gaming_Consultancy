@@ -1,4 +1,4 @@
-class BfrandomizerController < ApplicationController
+class BfrandomizersController < ApplicationController
 
   def index
     # @bfrandomizer_history = current_user.bfrandomizer
@@ -12,13 +12,9 @@ class BfrandomizerController < ApplicationController
     # @consult_category = params[:category]
   end
 
-
-
-
-
-
-
-
-
+  def roll
+    @result = Bfrandomizer.random_result
+    render partial: 'shared/random_result', locals: { result: @result }
+  end
 
 end
