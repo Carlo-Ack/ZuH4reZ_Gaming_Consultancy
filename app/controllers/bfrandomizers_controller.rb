@@ -11,8 +11,7 @@ class BfrandomizersController < ApplicationController
   end
 
   def roll
-    # @result = Bfrandomizer.random?
-    # Something like this ^^
+    @result = Bfrandomizer.random
     render partial: 'shared/random_result', locals: { result: @result }
   end
 
