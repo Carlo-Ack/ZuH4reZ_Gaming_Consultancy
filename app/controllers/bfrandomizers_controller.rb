@@ -3,6 +3,7 @@ class BfrandomizersController < ApplicationController
   def index
     # @bfrandomizer_history = current_user.bfrandomizer
     @bfrandomizer_history = Bfrandomizer.all
+    @result = Bfrandomizer.order("RANDOM()").first
   end
 
   def new
@@ -12,7 +13,7 @@ class BfrandomizersController < ApplicationController
 
   def roll
     @result = Bfrandomizer.random
-    render partial: 'shared/random_result', locals: { result: @result }
+    render partial: 'bfrandomizers/random_result', locals: { result: @result }
   end
 
 end
