@@ -3,7 +3,7 @@
 <h2>Watch history:</h2>
 
 <div class="bfrandomizercardcontainer">
-<%# not clickable atm %>
+<%# not clickable atm because I don't save the records %>
   <% @bfrandomizer_history.each do |bfrandomizer| %>
     <div class="bfrandomizer-card">
       <h2><%= bfrandomizer.name%>, <%= bfrandomizer.created_at%></h2>
@@ -11,11 +11,12 @@
   <% end %>
 </div>
 
-
 <div class="bfrandomizerroll">
  <%= link_to "Roll the dice",
   roll_bfrandomizers_path,
-  class: "btn btn-outline-primary btn-sm", style: "border-radius:12px;" %>
+  data: { turbo_frame: "randomizer_result" },
+  class: "btn btn-outline-primary btn-sm",
+  style: "border-radius:12px;" %>
 </div>
 
 <turbo-frame id="randomizer_result">
