@@ -1,3 +1,5 @@
+require "yaml"
+
 puts "Cleaning DB"
 Consultation.destroy_all
 User.delete_all
