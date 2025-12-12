@@ -3,7 +3,7 @@ class BfrandomizersController < ApplicationController
   def index
     # @bfrandomizer_history = current_user.bfrandomizer
     @bfrandomizer_history = Bfrandomizer.all
-    @result = Bfrandomizer.order("RANDOM()").first
+    # @result = Bfrandomizer.order("RANDOM()").first
   end
 
   def new
