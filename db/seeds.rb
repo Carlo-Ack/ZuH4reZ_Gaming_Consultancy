@@ -19,4 +19,19 @@ puts "Creating Data for Bfrandomizer"
 Bfrandomizer.create!(user: test_user, name: "Try Nr. 1", player_class: "Support", class_specialization: "Push", primary_weapon: "SVK", secondary_weapon: "Revolver", gadget_one: "Defi", gadget_two: "Launcher")
 Bfrandomizer.create!(user: test_user, name: "Try Nr. 2", player_class: "Enginner", class_specialization: "Repair", primary_weapon: "DRS", secondary_weapon: "Five-Seven", gadget_one: "Cover", gadget_two: "Anti-Grenade-Device")
 
+# ===================================================================================================
+
+file_path = Rails.root.join("db", "seeds", "player_classes.yml")
+data = YAML.load_file(file_path)
+
+data["player_classes"].each do |player_class|
+  Bfrandomizer.find_or_create_by!(
+    name: player_class["name"]
+  ) do |bf|
+    bf.description = player_class["description"]
+  end
+end
+
+# ===================================================================================================
+
 puts "Finished creating Seeds with #{User.count} Users, #{Consultation.count} Consultation and #{Bfrandomizer.count} Randomizers."
