@@ -35,3 +35,4 @@ end
 # ===================================================================================================
 
 puts "Finished creating Seeds with #{User.count} Users, #{Consultation.count} Consultation and #{Bfrandomizer.count} Randomizers."
+puts "Test if new Setup works out actually"
