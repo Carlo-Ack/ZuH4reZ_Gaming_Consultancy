@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_01_15_080905) do
+ActiveRecord::Schema[7.1].define(version: 2026_01_15_082432) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,9 +24,7 @@ ActiveRecord::Schema[7.1].define(version: 2026_01_15_080905) do
     t.string "secondary_weapon"
     t.string "gadget_one"
     t.string "gadget_two"
-    t.bigint "user_id", null: false
     t.string "description"
-    t.index ["user_id"], name: "index_bfrandomizers_on_user_id"
   end
 
   create_table "consultations", force: :cascade do |t|
@@ -49,6 +47,5 @@ ActiveRecord::Schema[7.1].define(version: 2026_01_15_080905) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "bfrandomizers", "users"
   add_foreign_key "consultations", "users"
 end
