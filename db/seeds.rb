@@ -14,8 +14,8 @@ puts "Creating Test-Consultation"
 Consultation.create!(user: test_user, name: "RPG")
 
 puts "Creating Data for Bfrandomizer"
-Bfrandomizer.create!(user: test_user, name: "Try Nr. 1", player_class: "Support", class_specialization: "Push", primary_weapon: "SVK", secondary_weapon: "Revolver", gadget_one: "Defi", gadget_two: "Launcher")
-Bfrandomizer.create!(user: test_user, name: "Try Nr. 2", player_class: "Enginner", class_specialization: "Repair", primary_weapon: "DRS", secondary_weapon: "Five-Seven", gadget_one: "Cover", gadget_two: "Anti-Grenade-Device")
+Bfrandomizer.create!(name: "Try Nr. 1", player_class: "Support", class_specialization: "Push", primary_weapon: "SVK", secondary_weapon: "Revolver", gadget_one: "Defi", gadget_two: "Launcher")
+Bfrandomizer.create!(name: "Try Nr. 2", player_class: "Enginner", class_specialization: "Repair", primary_weapon: "DRS", secondary_weapon: "Five-Seven", gadget_one: "Cover", gadget_two: "Anti-Grenade-Device")
 
 player_class_file_path = Rails.root.join("db", "seeds", "player_classes.yml")
 player_class_data = YAML.load_file(player_class_file_path)
