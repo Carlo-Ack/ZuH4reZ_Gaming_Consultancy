@@ -1,0 +1,12 @@
+gadget_ones:
+  - name: Defib.
+    description: Frontline soldier with reliable mid-range weapons.
+
+  - name: Portable Cover
+    description: Anti-vehicle specialist with repair tools.
+
+  - name: Ladder
+    description: Ammo supply and suppression fire.
+
+  - name: Grenade Launcher
+    description: Long-range and information gathering.

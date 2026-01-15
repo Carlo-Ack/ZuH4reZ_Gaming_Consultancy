@@ -1,4 +1,4 @@
-class_specialization:
+class_specializations:
   - name: Assault
     description: Frontline soldier with reliable mid-range weapons.
 

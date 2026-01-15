@@ -1,4 +1,4 @@
-primary_weapon:
+primary_weapons:
   - name: M4
     description: Frontline soldier with reliable mid-range weapons.
 
