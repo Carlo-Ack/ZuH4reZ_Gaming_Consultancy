@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_12_01_105455) do
+ActiveRecord::Schema[7.1].define(version: 2026_01_15_080905) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_01_105455) do
     t.string "gadget_one"
     t.string "gadget_two"
     t.bigint "user_id", null: false
+    t.string "description"
     t.index ["user_id"], name: "index_bfrandomizers_on_user_id"
   end
 
