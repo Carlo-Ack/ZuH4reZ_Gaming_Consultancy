@@ -1,0 +1,12 @@
+primary_weapon:
+  - name: M4
+    description: Frontline soldier with reliable mid-range weapons.
+
+  - name: SVK
+    description: Anti-vehicle specialist with repair tools.
+
+  - name: Mini-Scout
+    description: Ammo supply and suppression fire.
+
+  - name: Shotgun
+    description: Long-range and information gathering.
