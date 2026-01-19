@@ -22,7 +22,7 @@ player_class_data = YAML.load_file(player_class_file_path)
 
 player_class_data["player_classes"].each do |player_class|
   Bfrandomizer.find_or_create_by!(
-    name: player_class["name"]
+    player_class: player_class["name"]
   ) do |pc|
     pc.description = player_class["description"]
   end
@@ -33,7 +33,7 @@ class_specialization_data = YAML.load_file(class_specialization_file_path)
 
 class_specialization_data["class_specializations"].each do |class_specialization|
   Bfrandomizer.find_or_create_by!(
-    name: class_specialization["name"]
+    class_specialization: class_specialization["name"]
   ) do |cs|
     cs.description = class_specialization["description"]
   end
@@ -44,7 +44,7 @@ primary_weapon_data = YAML.load_file(primary_weapon_file_path)
 
 primary_weapon_data["primary_weapons"].each do |primary_weapon|
   Bfrandomizer.find_or_create_by!(
-    name: primary_weapon["name"]
+    primary_weapon: primary_weapon["name"]
   ) do |pw|
     pw.description = primary_weapon["description"]
   end
@@ -55,7 +55,7 @@ secondary_weapon_data = YAML.load_file(secondary_weapon_file_path)
 
 secondary_weapon_data["secondary_weapons"].each do |secondary_weapon|
   Bfrandomizer.find_or_create_by!(
-    name: secondary_weapon["name"]
+    secondary_weapon: secondary_weapon["name"]
   ) do |sw|
     sw.description = secondary_weapon["description"]
   end
@@ -66,7 +66,7 @@ gadget_one_data = YAML.load_file(gadget_one_file_path)
 
 gadget_one_data["gadget_ones"].each do |gadget_one|
   Bfrandomizer.find_or_create_by!(
-    name: gadget_one["name"]
+    gadget_one: gadget_one["name"]
   ) do |go|
     go.description = gadget_one["description"]
   end
@@ -77,7 +77,7 @@ gadget_two_data = YAML.load_file(gadget_two_file_path)
 
 gadget_two_data["gadget_twos"].each do |gadget_two|
   Bfrandomizer.find_or_create_by!(
-    name: gadget_two["name"]
+    gadget_two: gadget_two["name"]
   ) do |gt|
     gt.description = gadget_two["description"]
   end
