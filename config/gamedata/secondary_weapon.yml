@@ -1,9 +1,4 @@
-secondary_weapons:
-  - name: Five-Seven
-    description: Frontline soldier with reliable mid-range weapons.
-
-  - name: Revolver
-    description: Anti-vehicle specialist with repair tools.
-
-  - name: New Revolver
-    description: Ammo supply and suppression fire.
+- Five-Seven
+- Revolver
+- Nothing
+- Hammer

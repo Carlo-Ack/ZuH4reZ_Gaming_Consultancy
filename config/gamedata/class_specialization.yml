@@ -1,12 +1,15 @@
 Assault:
   - Grenadier
   - Breacher
+
 Engineer:
   - Combat-ENgineer
   - Anti-Vehicle
+
 Support:
   - Fighter
   - Whateversecond
+  
 Recon:
   - Spotter
   - Assassin

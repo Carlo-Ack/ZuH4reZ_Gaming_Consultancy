@@ -1,12 +1,4 @@
-player_classes:
-  - name: Assault
-    description: Frontline soldier with reliable mid-range weapons.
-
-  - name: Engineer
-    description: Anti-vehicle specialist with repair tools.
-
-  - name: Support
-    description: Ammo supply and suppression fire.
-
-  - name: Recon
-    description: Long-range and information gathering.
+- Assault
+- Engineer
+- Support
+- Recon
