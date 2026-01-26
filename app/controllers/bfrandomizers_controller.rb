@@ -2,7 +2,7 @@ class BfrandomizersController < ApplicationController
 
   def index
     # @bfrandomizer_history = current_user.bfrandomizer
-    @bfrandomizer_history = Bfrandomizer.all
+    @bfrandomizer_history = []
   end
 
   def new

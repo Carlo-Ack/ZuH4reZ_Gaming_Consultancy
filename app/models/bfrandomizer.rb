@@ -3,10 +3,10 @@ class Bfrandomizer
   
   # belongs_to :user, optional: true
 
- data_file_path = Rails.root.join("config", "gamedata")
+ DATA_FILE_PATH = Rails.root.join("config", "bfrandomizer")
  
  def self.data
-    @data ||= Dir[data_file_path.join("*.yml")].each_with_object({}) do |file, hash|
+    @data ||= Dir[DATA_FILE_PATH.join("*.yml")].each_with_object({}) do |file, hash|
       key = File.basename(file, ".yml")
       hash[key] = YAML.load_file(file)
     end
