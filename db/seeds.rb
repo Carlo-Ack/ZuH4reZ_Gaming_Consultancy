@@ -17,7 +17,7 @@ puts "Creating Data for Bfrandomizer"
 Bfrandomizer.create!(name: "Try Nr. 1", player_class: "Support", class_specialization: "Push", primary_weapon: "SVK", secondary_weapon: "Revolver", gadget_one: "Defi", gadget_two: "Launcher")
 Bfrandomizer.create!(name: "Try Nr. 2", player_class: "Enginner", class_specialization: "Repair", primary_weapon: "DRS", secondary_weapon: "Five-Seven", gadget_one: "Cover", gadget_two: "Anti-Grenade-Device")
 
-player_class_file_path = Rails.root.join("db", "seeds", "player_classes.yml")
+player_class_file_path = Rails.root.join("config", "gamedata", "player_classes.yml")
 player_class_data = YAML.load_file(player_class_file_path)
 
 player_class_data["player_classes"].each do |player_class|
@@ -28,7 +28,7 @@ player_class_data["player_classes"].each do |player_class|
   end
 end
 
-class_specialization_file_path = Rails.root.join("db", "seeds", "class_specialization.yml")
+class_specialization_file_path = Rails.root.join("config", "gamedata", "class_specialization.yml")
 class_specialization_data = YAML.load_file(class_specialization_file_path)
 
 class_specialization_data["class_specializations"].each do |class_specialization|
@@ -39,7 +39,7 @@ class_specialization_data["class_specializations"].each do |class_specialization
   end
 end
 
-primary_weapon_file_path = Rails.root.join("db", "seeds", "primary_weapon.yml")
+primary_weapon_file_path = Rails.root.join("config", "gamedata", "primary_weapon.yml")
 primary_weapon_data = YAML.load_file(primary_weapon_file_path)
 
 primary_weapon_data["primary_weapons"].each do |primary_weapon|
@@ -50,7 +50,7 @@ primary_weapon_data["primary_weapons"].each do |primary_weapon|
   end
 end
 
-secondary_weapon_file_path = Rails.root.join("db", "seeds", "secondary_weapon.yml")
+secondary_weapon_file_path = Rails.root.join("config", "gamedata", "secondary_weapon.yml")
 secondary_weapon_data = YAML.load_file(secondary_weapon_file_path)
 
 secondary_weapon_data["secondary_weapons"].each do |secondary_weapon|
@@ -61,7 +61,7 @@ secondary_weapon_data["secondary_weapons"].each do |secondary_weapon|
   end
 end
 
-gadget_one_file_path = Rails.root.join("db", "seeds", "gadget_one.yml")
+gadget_one_file_path = Rails.root.join("config", "gamedata", "gadget_one.yml")
 gadget_one_data = YAML.load_file(gadget_one_file_path)
 
 gadget_one_data["gadget_ones"].each do |gadget_one|
@@ -72,7 +72,7 @@ gadget_one_data["gadget_ones"].each do |gadget_one|
   end
 end
 
-gadget_two_file_path = Rails.root.join("db", "seeds", "gadget_two.yml")
+gadget_two_file_path = Rails.root.join("config", "gamedata", "gadget_two.yml")
 gadget_two_data = YAML.load_file(gadget_two_file_path)
 
 gadget_two_data["gadget_twos"].each do |gadget_two|
