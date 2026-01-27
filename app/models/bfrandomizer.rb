@@ -35,6 +35,7 @@ class Bfrandomizer
     secondary_weapon: data["secondary_weapon"].sample,
     gadget_one: data["gadget_one"].sample,
     gadget_two: data["gadget_two"].sample
+    # Should do the same for gadgets as the specialization above - is related to class
   )
  end
 end
