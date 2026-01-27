@@ -1,15 +1,15 @@
 Assault:
-  - Grenadier
   - Breacher
+  - Frontliner
 
 Engineer:
-  - Combat-ENgineer
-  - Anti-Vehicle
+  - Anti-Armor
+  - Combat-Engineer
 
 Support:
-  - Fighter
-  - Whateversecond
+  - Combat Medic
+  - Fire Support
   
 Recon:
-  - Spotter
-  - Assassin
+  - Sniper
+  - Spec Ops

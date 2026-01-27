@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :bfrandomizers do
     get :roll, on: :collection
   end
-
+  # maybe later on: :member if its linked to users!
+  
 end
