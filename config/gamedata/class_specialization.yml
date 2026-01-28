@@ -1,0 +1,15 @@
+Assault:
+  - Breacher
+  - Frontliner
+
+Engineer:
+  - Anti-Armor
+  - Combat-Engineer
+
+Support:
+  - Combat Medic
+  - Fire Support
+  
+Recon:
+  - Sniper
+  - Spec Ops

@@ -1,8 +1,10 @@
-⚛️ ZuH4reZ_Gaming_Consultancy
+⚛️ ZuH4reZ_Gaming_Consultancy:
+
 Tales and Advice told by friends & ZuH4reZ.
 A fully working Web-app to help progressing through your struggle of what to play next with certain addon features like game randomizers to make the experience even more challenging.
 
 If you need any help regarding finding your perfect game to match you - get consulted. :-]
+
 If you need special challenges in getting randomized loadouts in BF6 & Hunt Showdown - checkout the randomizers. :-]
 
 🏁 Project Goals:
