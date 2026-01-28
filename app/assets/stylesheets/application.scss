@@ -10,3 +10,10 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-image: linear-gradient(to right, #121113, #302e30);
+  color: #6a1781;           /* light text */
+}
