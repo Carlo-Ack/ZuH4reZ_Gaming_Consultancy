@@ -1,0 +1,24 @@
+<h1>Welcome to the Battlefield6 Randomizer:</h1>
+
+<h2>Watch history:</h2>
+
+<div class="bfrandomizercardcontainer">
+<%# not clickable atm because I don't save the records %>
+  <% @bfrandomizer_history.each do |bfrandomizer| %>
+    <div class="bfrandomizer-card">
+      <h2><%= bfrandomizer.name%>, <%= bfrandomizer.created_at%></h2>
+    </div>
+  <% end %>
+</div>
+
+<div class="bfrandomizerroll">
+ <%= link_to "Roll the dice",
+  roll_bfrandomizers_path,
+  data: { turbo_frame: "randomizer_result" },
+  class: "btn btn-outline-primary btn-sm",
+  style: "border-radius:12px;" %>
+</div>
+<%# Should be Javascript in the future! %>
+<turbo-frame id="randomizer_result">
+
+</turbo-frame>

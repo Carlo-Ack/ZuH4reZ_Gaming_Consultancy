@@ -10,15 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_10_14_071816) do
+ActiveRecord::Schema[7.1].define(version: 2026_01_15_082432) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bfrandomizers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "player_class"
+    t.string "class_specialization"
+    t.string "primary_weapon"
+    t.string "secondary_weapon"
+    t.string "gadget_one"
+    t.string "gadget_two"
+    t.string "description"
+  end
 
   create_table "consultations", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+  end
+
+  create_table "surveys", force: :cascade do |t|
+    t.string "firstquestion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
