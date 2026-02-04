@@ -15,4 +15,8 @@ Rails.application.routes.draw do
   resources :huntrandomizers do
     get :roll, on: :collection
   end
+
+  get "impressum", to: "pages#impressum"
+  get "faq", to: "pages#faq"
+
 end
