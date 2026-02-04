@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   end
   # maybe later on: :member if its linked to users!
   
+  resources :huntrandomizers do
+    get :roll, on: :collection
+  end
 end
