@@ -19,5 +19,5 @@ body {
   font-family: system-ui, sans-serif;
 //   could potentially use variable names for colors because of SCSS
   background-image: linear-gradient(to right, #121113, #302e30);
-  color: #6a1781;           /* light text */
+  color: $purple-on-black;           /* light text */
 }
