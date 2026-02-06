@@ -2,12 +2,11 @@
     justify-items: center;
     background-color: $purple-background;
     color: $orange;
-    border: 2px solid;
     margin: 2%;
     padding: 2%;
     font-weight: 500;
     cursor: pointer;    
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
     background-color: $purple-button;
