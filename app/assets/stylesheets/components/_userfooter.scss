@@ -1,0 +1,32 @@
+.userfooter-whole {
+  max-width: 600px;
+  margin: 0 12px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  background: linear-gradient(135deg,#3e2a72, #532361);
+  color: rgb(197, 102, 34);
+
+}
+
+.userfooter-buttons {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 350;
+  font-size: 19px;
+  padding: 0.8em 1.5em 0.8em 1.2em;
+  color: white;
+  background: #5f2890;
+  background: linear-gradient(
+    0deg,
+    rgb(49, 29, 164) 0%,
+    rgba(132, 116, 254, 1) 100%
+  );
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #2a1e71be;
+  letter-spacing: 0.07em;
+  border-radius: 14px;
+  corner-shape: scoop;
+
+}
