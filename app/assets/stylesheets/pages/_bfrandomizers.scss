@@ -1,5 +1,23 @@
-.bfrandomizerroll {
+.bfrandomizercardcontainer {
     display: flex;
     margin: 2%;
     
+}
+
+.bfrandomizer-card {
+    margin: 2%;
+    
+}
+
+.bfrandomizerroll {
+    display: flex;
+    margin: 2%;
+    padding: 2%;
+    
+}
+
+#random_result {
+  padding: 2%;
+  border-radius: 12px;
+
 }
