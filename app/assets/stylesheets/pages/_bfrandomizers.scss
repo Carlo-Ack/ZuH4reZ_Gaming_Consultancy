@@ -1,3 +1,8 @@
+.bfrandomizerheadlines {
+    margin: 2%;
+    
+}
+
 .bfrandomizercardcontainer {
     display: flex;
     margin: 2%;
@@ -11,13 +16,23 @@
 
 .bfrandomizerroll {
     display: flex;
-    margin: 2%;
-    padding: 2%;
+    margin: 1%;
+    padding: 1%;
     
+}
+
+#randomizer_result {
+  padding: 0;
 }
 
 #random_result {
   padding: 2%;
   border-radius: 12px;
+
+}
+
+.randomizer_result_content {
+    margin-left: 4%;
+    margin-bottom: 2%;
 
 }
