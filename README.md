@@ -9,10 +9,10 @@ If you need special challenges in getting randomized loadouts in BF6 & Hunt Show
 First Purpose of this website was mainly to recap coding exercises & develop JS knowledge - but turned into passionate project while progressing. :-]
 
 🎴 Frontend:
- The frontend was built using various frameworks such as SCSS and JavaScript.
+The frontend was built using various frameworks such as SCSS and JavaScript.
 
 🔧 Backend:
- The backend was built using ruby on rails.
+The backend was built using ruby on rails.
 
 🌐 Live Deployment: 
->Under construction<
+->Under construction<-
