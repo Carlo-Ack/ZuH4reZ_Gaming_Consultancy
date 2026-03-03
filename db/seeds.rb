@@ -1,22 +1,30 @@
+# Seed saplings for initial Database
+
+# Yml files contain gamedata for randomizers to work
 require "yaml"
 
+# Cleaning previous records form Database
 puts "Cleaning DB"
 Consultation.destroy_all
 User.delete_all
 Bfrandomizer.destroy_all
 
+# Creating Admin and Test-User
 puts "Creating Admin"
 admin = User.create!(email: "zuh4rez_gaming_consultancy@gmx.de", password: "password")
 puts "Creating Test-User"
 test_user = User.create!(email: "Carlo@Carlo.com", password: "password")
 
+# Creating Test/Initial Consultation Data to be shown to Admin/Test-User
 puts "Creating Test-Consultation"
 Consultation.create!(user: test_user, name: "RPG")
 
+# Creating Test/Initial Randomizer records to be shown to Admin/Test-User
 puts "Creating Data for Bfrandomizer"
 Bfrandomizer.create!(name: "Try Nr. 1", player_class: "Support", class_specialization: "Push", primary_weapon: "SVK", secondary_weapon: "Revolver", gadget_one: "Defi", gadget_two: "Launcher")
 Bfrandomizer.create!(name: "Try Nr. 2", player_class: "Enginner", class_specialization: "Repair", primary_weapon: "DRS", secondary_weapon: "Five-Seven", gadget_one: "Cover", gadget_two: "Anti-Grenade-Device")
 
+# Adding and selecting the Yml files that contain Gamedata
 player_class_file_path = Rails.root.join("config", "gamedata", "player_classes.yml")
 player_class_data = YAML.load_file(player_class_file_path)
 
@@ -83,4 +91,5 @@ gadget_two_data["gadget_twos"].each do |gadget_two|
   end
 end
 
+# Summary Display
 puts "Finished creating Seeds with #{User.count} Users, #{Consultation.count} Consultation and #{Bfrandomizer.count} Randomizers."
