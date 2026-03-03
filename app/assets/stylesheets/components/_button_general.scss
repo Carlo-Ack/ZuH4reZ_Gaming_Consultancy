@@ -1,0 +1,17 @@
+.button_general {
+    justify-items: center;
+    background-color: $purple-background;
+    color: $orange;
+    margin: 2%;
+    padding: 2%;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;    
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+    background-color: $purple-button;
+    color: white;
+
+    }
+}
